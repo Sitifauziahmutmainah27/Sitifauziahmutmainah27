@@ -1,0 +1,556 @@
+Lihat video tutorial! Buatlah dua input, satu label operasi tambah, satu tombol, dan satu komponen label untuk hasil. Tombol digunakan untuk melakukan aksi tambah. Jika input A AND input B integer maka lakukan aksi hitung.
+
+
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body><hr>
+
+
+
+    <input id="input1">
+
+    
+
+    <label><b>+</b></label>
+
+    
+
+    <input id="input2">
+
+    
+
+    <button onclick="hitung()">hitung</button>
+
+    
+
+    <label id="hasil">46</label>
+
+    
+
+    <br>
+
+    
+
+    <br>
+
+    
+
+    <input id="input3">
+
+    
+
+    <label><b>-</b></label>
+
+    
+
+    <input id="input4">
+
+    
+
+    <button onclick="kurang()">hitung</button>
+
+    
+
+    <label id="kurang">20</label>
+
+    
+
+    <br>
+
+    
+
+    <br>
+
+    
+
+    <input id="input5">
+
+    
+
+    <label><b>:</b></label>
+
+    
+
+    <input id="input6">
+
+    
+
+    <button onclick="bagi()">hitung</button>
+
+    
+
+    <label id="bagi">17</label>
+
+    
+
+    <br>
+
+    
+
+    <br>
+
+    
+
+    <input id="input7">
+
+    
+
+    <label><b>*</b></label>
+
+    
+
+    <input id="input8">
+
+    
+
+    <button onclick="kali()">hitung</button>
+
+    
+
+    <label id="kali">80</label>
+
+    
+
+    <br>
+
+    
+
+    <br>
+
+    
+
+    <input id="input9">
+
+    
+
+    <label>%</label>
+
+    
+
+    <input id="input10">
+
+    
+
+    <button onclick="modulus()">hitung</button>
+
+    
+
+    <label id="modulus">20</label>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <script>
+
+    
+
+        function hitung(){
+
+    
+
+            let input1 = document.getElementById("input1").value;
+
+    
+
+            let input2 = document.getElementById("input2").value;
+
+    
+
+            let hasil;
+
+    
+
+    
+
+    
+
+            input1 = parseInt(input1);
+
+    
+
+            input2 = parseInt(input2);
+
+    
+
+    
+
+    
+
+            if(!isNaN(input1) && !isNaN(input2)){
+
+    
+
+                hasil = input1 + input2;
+
+    
+
+            } else{
+
+    
+
+                hasil = 'nilai invalid'
+
+    
+
+            }
+
+    
+
+    
+
+    
+
+            
+
+    
+
+            
+
+    
+
+            document.getElementById("hasil").innerHTML = hasil;
+
+    
+
+    
+
+    
+
+            console.log(typeof input1,typeof input2, hasil);
+
+    
+
+        }
+
+    
+
+        function kurang(){
+
+    
+
+            let input1 = document.getElementById("input3").value;
+
+    
+
+            let input2 = document.getElementById("input4").value;
+
+    
+
+            let hasil1;
+
+    
+
+    
+
+    
+
+            input1 = parseInt(input1);
+
+    
+
+            input2 = parseInt(input2);
+
+    
+
+    
+
+    
+
+            if(!isNaN(input1) && !isNaN(input2)){
+
+    
+
+                hasil1 = input1 - input2;
+
+    
+
+            } else{
+
+    
+
+                hasil1 = 'nilai invalid'
+
+    
+
+            }
+
+    
+
+    
+
+    
+
+            
+
+    
+
+            
+
+    
+
+            document.getElementById("kurang").innerHTML = hasil1;
+
+    
+
+    
+
+    
+
+            console.log(typeof input1,typeof input2, hasil1);
+
+    
+
+        }
+
+    
+
+        function bagi(){
+
+    
+
+            let input1 = document.getElementById("input5").value;
+
+    
+
+            let input2 = document.getElementById("input6").value;
+
+    
+
+            let hasil2;
+
+    
+
+    
+
+    
+
+            input1 = parseInt(input1);
+
+    
+
+            input2 = parseInt(input2);
+
+    
+
+    
+
+    
+
+            if(!isNaN(input1) && !isNaN(input2)){
+
+    
+
+                hasil2 = input1 / input2;
+
+    
+
+            } else{
+
+    
+
+                hasil2 = 'nilai invalid'
+
+    
+
+            }
+
+    
+
+    
+
+    
+
+            
+
+    
+
+            
+
+    
+
+            document.getElementById("bagi").innerHTML = hasil2;
+
+    
+
+    
+
+    
+
+            console.log(typeof input1,typeof input2, hasil2);
+
+    
+
+        }
+
+    
+
+        function kali(){
+
+    
+
+            let input1 = document.getElementById("input7").value;
+
+    
+
+            let input2 = document.getElementById("input8").value;
+
+    
+
+            let hasil3;
+
+    
+
+    
+
+    
+
+            input1 = parseInt(input1);
+
+    
+
+            input2 = parseInt(input2);
+
+    
+
+    
+
+    
+
+            if(!isNaN(input1) && !isNaN(input2)){
+
+    
+
+                hasil3 = input1 * input2;
+
+    
+
+            } else{
+
+    
+
+                hasil3 = 'nilai invalid'
+
+    
+
+            }
+
+    
+
+    
+
+    
+
+            
+
+    
+
+            
+
+    
+
+            document.getElementById("kali").innerHTML = hasil3;
+
+    
+
+    
+
+    
+
+            console.log(typeof input1,typeof input2, hasil3);
+
+    
+
+        }
+
+    
+
+        function modulus(){
+
+    
+
+            let input1 = document.getElementById("input9").value;
+
+    
+
+            let input2 = document.getElementById("input10").value;
+
+    
+
+            let hasil4;
+
+    
+
+    
+
+    
+
+            input1 = parseInt(input1);
+
+    
+
+            input2 = parseInt(input2);
+
+    
+
+    
+
+    
+
+            if(!isNaN(input1) && !isNaN(input2)){
+
+    
+
+                hasil4 = input1 % input2;
+
+    
+
+            } else{
+
+    
+
+                hasil4 = 'nilai invalid'
+
+    
+
+            }
+
+    
+
+    
+
+    
+
+            
+
+    
+
+            
+
+    
+
+            document.getElementById("modulus").innerHTML = hasil4;
+
+    
+
+    
+
+    
+
+            console.log(typeof input1,typeof input2, hasil3, hasil4);
+
+    
+
+        }
+
+    
+
+    </script></body></html>
+
+
+
